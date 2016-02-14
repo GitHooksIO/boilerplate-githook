@@ -1,0 +1,11 @@
+title: TBC
+
+description: TBC
+
+entry_point: githook.js
+
+triggered_on:
+  - 'push'
+
+scopes_required:
+  - 'repo'
