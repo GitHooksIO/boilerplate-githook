@@ -1,4 +1,4 @@
-#Boilerplate GitHook (Skeleton Code)
+#Boilerplate Vanilla GitHook
 This is a very simple GitHook boilerplate project to help you develop your first Node GitHook.
 
 #Install
@@ -8,7 +8,7 @@ cd boilerplate-githook
 npm install request
 ```
 
-Now you'll want to [create a Personal Access Token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/), and paste it into test.js (line 5).
+Now you'll want to [create a Personal Access Token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/), and paste it into test.js (line 3).
 
 You're ready to start developing!
 

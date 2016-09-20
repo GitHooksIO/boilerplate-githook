@@ -1,11 +1,14 @@
+# See http://githooks.io/.githook.yml for a fuller example.
 title: TBC
 
 description: TBC
 
 entry_point: githook.js
 
+# See http://githooks.io/events
 triggered_on:
   - 'push'
 
+# See http://githooks.io/scopes
 scopes_required:
   - 'repo'

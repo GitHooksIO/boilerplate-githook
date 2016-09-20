@@ -1,8 +1,6 @@
-var request = require('request'), // this Node module will always be available for your GitHook.
-
     // paste your personal access token here.
     // To find out where to get one, see https://help.github.com/articles/creating-an-access-token-for-command-line-use/
-    access_token = '',
+var access_token = '',
 
     // mock the payload information you expect to receive (according to the event type).
     // See https://developer.github.com/v3/activity/events/types/
@@ -21,6 +19,6 @@ require('./githook')({
     parameters:   parameters,
     payload:      payload
 }, {
-    succeed: function () { console.log('marked as succeeded'); },
-    fail: function () { console.log('marked as failed'); }
+    succeed: function (response) { console.log('marked as succeeded', response); },
+    fail: function (response) { console.log('marked as failed', response); }
 });
