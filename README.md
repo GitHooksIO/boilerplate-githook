@@ -8,18 +8,13 @@ cd boilerplate-githook
 npm install request
 ```
 
-Now you'll want to [create a Personal Access Token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/), and paste it into test.js (line 3).
+You may want to [create a Personal Access Token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) for testing purposes.
 
 You're ready to start developing!
-
-#Develop
-Run `node test.js` to see your GitHook in action. There's obviously not much going on until you write the code. This is a boilerplate project!
-
-Best of luck. Hope you make something amazing!
 
 #Contribute
 When your GitHook is ready to use, please [contribute your GitHook](http://githooks.io/contribute) to GitHooks.io.
 
-Please make absolutely sure you've not committed your personal access token to the repository at any point (and revoke your access token from GitHub just to be safe). The `test.js` file here is git-ignored by default, but even so, be careful.
+Please make absolutely sure you've not committed your personal access token to the repository at any point (and revoke your access token from GitHub just to be safe).
 
 Also, please fill out the details in `.githook.yml` properly before you contribute your GitHook.

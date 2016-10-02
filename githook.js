@@ -1,34 +1,27 @@
-module.exports = function (data, process) {
+module.exports = function (gh) {
 
-    var request = require('request');
-
-    if (data.payload.ref_type === 'tag') {
+    if (gh.data.payload.ref_type === 'tag') {
         // A new tag was created!
         // This particular GitHook cares about that, but your mileage may vary.
 
         var options = {
-            url:      data.parameters.url,
-            headers: {
-                'Content-Type':  'application/json',
-                'User-Agent':    'githooks-io',
-                'Authorization': 'token ' + data.access_token
-            },
+            url:      gh.data.parameters.url,
             json: {
                 foo: data.parameters.bar
             }
         };
 
-        request.post(options, function (err, httpResponse, body) {
+        gh.modules.authRequest.post(options, function (err, httpResponse, body) {
             if (err) {
-                process.fail('Fail! Response: ' + err);
+                gh.process.fail('Fail! Response: ' + err);
             }
             else {
-                process.succeed('Success! Response:' + body);
+                gh.process.succeed('Success! Response:' + body);
             }
         });
     }
     else {
-        process.succeed('This GitHook did not have to do anything.');
+        gh.process.succeed('This GitHook did not have to do anything.');
     }
 
 };
